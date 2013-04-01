@@ -20,6 +20,7 @@ package{
     import flash.ui.ContextMenuItem;
     import flash.utils.Timer;
     import flash.utils.setTimeout;
+    import flash.ui.Mouse;
     
     [SWF(backgroundColor="#000000", frameRate="60", width="480", height="270")]
     public class VideoJS extends Sprite{
@@ -59,7 +60,8 @@ package{
             _ctxMenu.hideBuiltInItems();
             _ctxMenu.customItems.push(_ctxVersion, _ctxAbout);
             this.contextMenu = _ctxMenu;
-
+            
+            Mouse.hide();
         }
         
         private function registerExternalMethods():void{
